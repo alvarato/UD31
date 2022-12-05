@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="text-align: center;">REPETICIONES</p>
+    <div id="show" style="border: solid; width: max-content; margin: auto; padding: 10px;"></div>
+    <script>
+        let aux = 0;
+        let num = [0,0,0,0,0,0,0,0,0,0,0,0]; 
+        for (let index = 0; index < 36000; index++) {
+          aux =  Math.floor(Math.random() * 6)+1;
+          aux += Math.floor(Math.random() * 6)+1;
+          num[aux-1] +=1;
+        }
+        count = 1;
+        total = 0;
+         num.forEach(element => {
+            total += element;
+          document.getElementById('show').innerHTML += `<p>${"resutlado " + count + ": " + element + "  Total de tiros: " + total }</p>`;  
+         count++;
+        });
+    </script>
+</body>
+</html>

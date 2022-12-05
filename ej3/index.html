@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td {
+	border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <p id="p1">Este es el parrafo 1</p>
+    <table>
+        <thead>
+            <th>Tabla</th>
+            <th>Tabla</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="p2">Parrafo 2</td>
+                <td id="p3">Parrafo 3</td>
+            </tr>
+            <tr>
+                <td id="p4">Parrafo 4</td>
+                <td id="p5">Parrafo 5</td>
+            </tr>
+        </tbody>
+
+    </table>
+<script>
+    const p1 = document.getElementById('p1');
+    const p2 = document.getElementById('p2');
+    const p3 = document.getElementById('p3');
+    const p4 = document.getElementById('p4');
+    const p5 = document.getElementById('p5');
+
+    p1.addEventListener("click", () =>{alert("Parrafo 1")});
+    p2.addEventListener("click", () =>{alert("Parrafo 2")});
+    p3.addEventListener("click", () =>{alert("Parrafo 3")});
+    p4.addEventListener("click", () =>{alert("Parrafo 4")});
+    p5.addEventListener("click", () =>{alert("Parrafo 5")});
+</script>
+</body>
+</html>

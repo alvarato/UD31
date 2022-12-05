@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: auto; 
+            width: max-content;
+            margin-top: 20px;
+        }
+        .boxP{
+            width: 200px;
+            height: 160px;
+            border: solid;
+        }
+        .boxG{
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxG" class="boxG"></div>
+    <div class="box">
+        <div>
+            <img class="boxP" src="img/foto1.jpg" alt="" onclick="change(1)">
+            <img class="boxP" src="img/foto2.jpg" alt="" onclick="change(2)">
+            <img class="boxP" src="img/foto3.jpg" alt="" onclick="change(3)">
+            <img class="boxP" src="img/foto4.jpg" alt="" onclick="change(4)">
+        </div>
+        <div>
+            <img class="boxP" src="img/foto5.jpg" alt="" onclick="change(5)"> 
+            <img class="boxP" src="img/foto6.jpg" alt="" onclick="change(6)">
+            <img class="boxP" src="img/foto7.jpg" alt="" onclick="change(7)">
+            <img class="boxP" src="img/foto8.jpg" alt="" onclick="change(8)">
+        </div>
+    </div>
+
+    <script>
+       function change(n){
+        let path = "img/foto"+n+".jpg";
+        document.getElementById("boxG").innerHTML = 
+        `<img style="width: 400px; height: 300px; border: none;"class="boxP" src="${path}" alt="">`;
+        }
+    </script>
+</body>
+</html>
